@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdelhalim Ghazi - Flutter Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2C3E50;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: 500;
+            margin-top: 40px;
+            border-bottom: 2px solid #3498DB;
+            padding-bottom: 5px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #3498DB;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 56px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        /* Project Showcase */
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .project-card {
+            background-color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: calc(33% - 20px);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-card h3 {
+            font-size: 22px;
+            padding: 15px 0;
+        }
+        .project-card a {
+            display: block;
+            padding: 15px;
+            background-color: #3498DB;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Skills with Icons */
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .skills img {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+        }
+
+        /* Contact Form */
+        .contact {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .contact button {
+            background-color: #3498DB;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .project-card {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+            .project-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Abdelhalim Ghazi</h1>
+        <p>Flutter Developer | Mobile App Specialist</p>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Project Showcase -->
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>eLearning App</h3>
+                <a href="https://github.com/r00texploit">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Flutter Shopping App</h3>
+                <a href="https://github.com/r00texploit">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Task Management Tool</h3>
+                <a href="https://github.com/r00texploit">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Skills Section with Icons -->
+        <h2>Skills</h2>
+        <div class="skills">
+            <img src="flutter-icon.png" alt="Flutter">
+            <img src="graphql-icon.png" alt="GraphQL">
+            <img src="firebase-icon.png" alt="Firebase">
+            <img src="git-icon.png" alt="Git">
+            <!-- Add more icons for skills -->
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Abdelhalim Ghazi - All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
