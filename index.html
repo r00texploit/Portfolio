@@ -127,54 +127,52 @@
             to { opacity: 1; }
         }
 
-        /* About Me Section */
-        .about {
-            display: flex;
-            align-items: center;
-            background-color: var(--bg-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .about:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-        }
-        .about img {
-            border-radius: 50%;
-            margin-right: 20px;
-            width: 150px;
-            height: 150px;
-        }
-        .about p {
-            flex: 1;
-            color: var(--text-color);
-        }
-
         /* Experience Section */
         .experience {
             margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-        .experience .experience-card {
+        .experience-card {
             background-color: var(--bg-color);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        .experience .experience-card:hover {
+        .experience-card:hover {
             transform: translateY(-10px);
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
         }
-        .experience .experience-card h3 {
+        .experience-card h3 {
             font-size: 22px;
             color: var(--primary-color);
         }
-        .experience .experience-card p {
+        .experience-card p {
             margin-top: 10px;
+        }
+        .experience-card .details {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 20px;
+            text-align: center;
+        }
+        .experience-card:hover .details {
+            opacity: 1;
         }
 
         /* Skills Section */
@@ -453,36 +451,57 @@
         </div>
     </div>
 
-    <!-- About Me Section -->
-    <div class="container" id="about">
-        <h2>About Me</h2>
-        <div class="about">
-            <img src="39797181.jpg" alt="Abdelhalim Ghazi">
-            <p>I am Abdelhalim Ghazi, a passionate Flutter Developer with over 5 years of experience in creating dynamic and user-friendly mobile applications. I specialize in integrating cutting-edge technologies like GraphQL and Firebase to build scalable solutions. My expertise includes Bloc patterns and UI/UX design principles.</p>
-        </div>
-    </div>
-
     <!-- Experience Section -->
     <div class="container" id="experience">
         <h2>Experience</h2>
         <div class="experience">
             <div class="experience-card">
-                <h3>Burjeel Holdings</h3>
-                <p>Role: Flutter Developer</p>
-                <p>Dates: Nov 2023 - May 2024</p>
-                <p>Main Accomplishments: Increased patient interaction efficiency by 30%</p>
+                <h3>Flutter Developer, Burjeel Holdings</h3>
+                <p>Nov 2023 – May 2024</p>
+                <div class="details">
+                    <p>Developed and maintained a healthcare app, improving patient interaction and appointment booking efficiency by 30%.</p>
+                    <p>Integrated Firebase and RESTful APIs for real-time data handling.</p>
+                    <p>Collaborated with UX/UI teams to design user-friendly interfaces, increasing engagement by 25%.</p>
+                </div>
             </div>
             <div class="experience-card">
-                <h3>ElSheikh Abdallah ElBadri University</h3>
-                <p>Role: Mobile App Developer</p>
-                <p>Dates: Oct 2023 - May 2024</p>
-                <p>Main Accomplishments: Reduced app load times by 40%</p>
+                <h3>Flutter Developer, ElSheikh Abdallah ElBadri University</h3>
+                <p>Apr 2023 – Oct 2024</p>
+                <div class="details">
+                    <p>Developed a robust eLearning app, improving user satisfaction by 40%.</p>
+                    <p>Led the full development cycle from analysis to deployment.</p>
+                    <p>Managed CI/CD pipelines for automated testing and deployment.</p>
+                </div>
             </div>
             <div class="experience-card">
-                <h3>Freelance Projects</h3>
-                <p>Role: Flutter Developer</p>
-                <p>Dates: Aug 2018 - Aug 2021</p>
-                <p>Main Accomplishments: Developed multiple successful mobile applications for various clients</p>
+                <h3>Flutter Developer, City Soft Ltd Co</h3>
+                <p>Jan 2023 – Mar 2023</p>
+                <div class="details">
+                    <p>Led development of complex Flutter applications, increasing downloads by 20%.</p>
+                    <p>Mentored junior developers and optimized app scalability.</p>
+                </div>
+            </div>
+            <div class="experience-card">
+                <h3>Flutter Instructor, Afro-Tech Training Center</h3>
+                <p>Jul 2022 – Feb 2023</p>
+                <div class="details">
+                    <p>Delivered training sessions on Flutter, contributing to a 30% increase in participants' technical proficiency.</p>
+                </div>
+            </div>
+            <div class="experience-card">
+                <h3>Flutter Developer, Smart-Node Ltd Co</h3>
+                <p>Mar 2022 – Jul 2022</p>
+                <div class="details">
+                    <p>Developed innovative mobile apps for iOS and Android, increasing user engagement by 30%.</p>
+                </div>
+            </div>
+            <div class="experience-card">
+                <h3>Freelance Mobile App Developer</h3>
+                <p>Mar 2018 – Mar 2021</p>
+                <div class="details">
+                    <p>Developed applications for various clients, achieving a 95% client satisfaction rate.</p>
+                    <p>Managed communication, timelines, and budgets effectively.</p>
+                </div>
             </div>
         </div>
     </div>
