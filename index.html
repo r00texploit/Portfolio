@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdelhalim Ghazi - Flutter Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        h1, h2 {
+            color: var(--primary-color);
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: 500;
+            margin-top: 40px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background-image: linear-gradient(to right, rgba(52, 152, 219, 0.9), rgba(41, 128, 185, 0.9)), url('background-image-url.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        /* Project Showcase */
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .project-card {
+            position: relative;
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-card h3 {
+            font-size: 22px;
+            padding: 15px 0;
+            color: var(--primary-color);
+        }
+        .project-card a {
+            display: block;
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .project-card a:hover {
+            background-color: #2980b9;
+        }
+        .project-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .project-card:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .skills img {
+            border-radius: 50%;
+            border: 2px solid var(--primary-color);
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+        .skills img:hover {
+            transform: scale(1.1);
+        }
+        .skill-card {
+            text-align: center;
+            margin: 20px;
+        }
+        .skill-card p {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        /* Contact Form */
+        .contact {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .contact form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 28px;
+        }
+        .contact label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+            text-align: left;
+        }
+        .contact input[type="text"],
+        .contact input[type="email"],
+        .contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            background-color: #f7f9fc;
+            font-size: 16px;
+            color: #333;
+            transition: border-color 0.3s ease;
+        }
+        .contact input[type="text"]:focus,
+        .contact input[type="email"]:focus,
+        .contact textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        .contact textarea {
+            resize: vertical;
+        }
+        .contact input[type="submit"] {
+            background-image: linear-gradient(to right, #3498db, #2980b9);
+            color: white;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            width: 100%;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .contact input[type="submit"]:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+        .contact input[type="submit"]:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+
+        /* Dark Mode */
+        :root {
+            --bg-color: #f7f9fc;
+            --text-color: #333;
+            --primary-color: #3498db;
+        }
+        [data-theme="dark"] {
+            --bg-color: #2c3e50;
+            --text-color: #ecf0f1;
+            --primary-color: #2980b9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .project-card {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .project-card {
+                width: calc(50% - 20px);
+            }
+            .skills img {
+                width: 60px;
+                height: 60px;
+            }
+            .contact form {
+                padding: 30px;
+            }
+        }
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+            .project-card {
+                width: 100%;
+            }
+            .skills img {
+                width: 50px;
+                height: 50px;
+            }
+            .contact form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Abdelhalim Ghazi</h1>
+        <p>Flutter Developer | Mobile App Specialist</p>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle">Toggle Dark Mode</button>
+
+    <!-- Container -->
+    <div class="container fade-in">
+
+        <!-- Project Showcase -->
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1">
+                <div class="overlay">
+                    <p>Tech Stack: Flutter, Firebase, etc.</p>
+                </div>
+                <h3>Project Title 1</h3>
+                <a href="#">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2">
+                <div class="overlay">
+                    <p>Tech Stack: Flutter, REST API</p>
+                </div>
+                <h3>Project Title 2</h3>
+                <a href="#">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3">
+                <div class="overlay">
+                    <p>Tech Stack: Dart, Firebase Auth</p>
+                </div>
+                <h3>Project Title 3</h3>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill-card">
+                <img src="flutter-icon.png" alt="Flutter">
+                <p>Flutter</p>
+            </div>
+            <div class="skill-card">
+                <img src="firebase-icon.png" alt="Firebase">
+                <p>Firebase</p>
+            </div>
+            <div class="skill-card">
+                <img src="dart-icon.png" alt="Dart">
+                <p>Dart</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something.." rows="5" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Abdelhalim Ghazi | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.toggleAttribute('data-theme', 'dark');
+        });
+
+        // Fade-In Effect
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0,
+            rootMargin: "0px 0px -200px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                appearOnScroll.unobserve(entry.target);
+            });
+        }, appearOptions);
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+
+</body>
+</html>
