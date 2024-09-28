@@ -6,50 +6,19 @@
     <title>Abdelhalim Ghazi - Flutter Developer Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        .about {
-            background-color: var(--bg-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        :root {
+            --bg-color: #f7f9fc;
+            --text-color: #333;
+            --primary-color: #3498db;
+            --secondary-color: #333;
+            --accent-color: #e74c3c;
         }
-        .about:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .testimonial-card {
-            background-color: var(--bg-color);
-            padding: 20px;
-            border-radius: 10px;
-            flex: 1 1 calc(50% - 20px);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-        }
-        .testimonial-card p {
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        .testimonial-card h4 {
-            text-align: right;
-            color: var(--primary-color);
-        }
-        @media (max-width: 768px) {
-            .testimonial-card {
-                flex: 1 1 100%;
-            }
+        [data-theme="dark"] {
+            --bg-color: #2c3e50;
+            --text-color: #ecf0f1;
+            --primary-color: #2980b9;
+            --secondary-color: #34495e;
+            --accent-color: #e74c3c;
         }
 
         /* General Styles */
@@ -109,14 +78,28 @@
         .hero h1 {
             font-size: 56px;
             margin-bottom: 10px;
-            color: white; /* Modified color for name */
+            color: white;
         }
         .hero p {
             font-size: 20px;
             margin-top: 10px;
         }
 
-        /* Project Showcase */
+        /* About Me Section */
+        .about {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .about:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Projects Section */
         .projects {
             display: flex;
             flex-wrap: wrap;
@@ -292,22 +275,6 @@
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* Dark Mode */
-        :root {
-            --bg-color: #f7f9fc;
-            --text-color: #333;
-            --primary-color: #3498db;
-            --secondary-color: #333;
-        }
-        [data-theme="dark"] {
-            --bg-color: #2c3e50;
-            --text-color: #ecf0f1;
-            --primary-color: #2980b9;
-            --secondary-color: #34495e;
-            --accent-color: #e74c3c;
-            --highlight-color: #8e44ad;
-        }
-
         /* Responsive Design */
         @media (max-width: 992px) {
             .project-card {
@@ -357,31 +324,16 @@
         <p>Flutter Developer | Mobile App Specialist</p>
     </div>
 
-    <!-- Dark Mode Toggle -->
-    <button id="theme-toggle">Toggle Dark Mode</button>
-
-    <h2>About Me</h2>
-    <div class="about">
-        <p>I am Abdelhalim Ghazi, a passionate Flutter Developer with over 5 years of experience in creating dynamic and user-friendly mobile applications. I specialize in integrating cutting-edge technologies like GraphQL and Firebase to build scalable solutions.</p>
-    </div>
-
-    <!-- Testimonials Section -->
-    <h2>Testimonials</h2>
-    <div class="testimonials">
-        <div class="testimonial-card">
-            <p>"Abdelhalim delivered an outstanding eCommerce app that exceeded our expectations. His expertise in Flutter is unparalleled."</p>
-            <h4>- Abdallah Nouraldaim</h4>
-        </div>
-        <div class="testimonial-card">
-            <p>"Working with Abdelhalim was a pleasure. He is highly skilled, reliable, and a great team player."</p>
-            <h4>- Murad Ahmed</h4>
+    <!-- About Me Section -->
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="about">
+            <p>I am Abdelhalim Ghazi, a passionate Flutter Developer with over 5 years of experience in creating dynamic and user-friendly mobile applications. I specialize in integrating cutting-edge technologies like GraphQL and Firebase to build scalable solutions.</p>
         </div>
     </div>
 
-    <!-- Container -->
-    <div class="container fade-in">
-
-        <!-- Project Showcase -->
+    <!-- Projects Section -->
+    <div class="container">
         <h2>Projects</h2>
         <div class="projects">
             <div class="project-card">
@@ -409,8 +361,10 @@
                 <a href="https://github.com/r00texploit/alla_zogak_user" target="_blank" rel="noopener noreferrer">View on GitHub</a>
             </div>
         </div>
+    </div>
 
-        <!-- Skills Section -->
+    <!-- Skills Section -->
+    <div class="container">
         <h2>Skills</h2>
         <div class="skills">
             <div class="skill-card">
@@ -426,8 +380,10 @@
                 <p>Dart</p>
             </div>
         </div>
+    </div>
 
-        <!-- Contact Form -->
+    <!-- Contact Form -->
+    <div class="container">
         <div class="contact">
             <h2>Contact Me</h2>
             <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mkgwlbnz" method="post">
@@ -442,8 +398,11 @@
 
                 <input type="submit" value="Submit">
             </form>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/abdelhalim-ghazi" target="_blank">LinkedIn</a>
+                <a href="https://github.com/r00texploit" target="_blank">GitHub</a>
+            </div>
         </div>
-
     </div>
 
     <!-- Footer -->
