@@ -87,7 +87,7 @@
         .hero {
             text-align: center;
             padding: 80px 20px;
-            background-image: linear-gradient(to right, rgba(0, 188, 212, 0.9), rgba(255, 64, 129, 0.9)), url('professional-photo.jpg');
+            background-image: linear-gradient(to right, rgba(0, 188, 212, 0.9), rgba(255, 64, 129, 0.9)), url('3979181.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -104,13 +104,16 @@
             font-size: 56px;
             margin-bottom: 10px;
             color: white;
+            animation: fadeIn 1s ease-in-out;
         }
         .hero p {
             font-size: 20px;
             margin-top: 10px;
+            animation: fadeIn 1.5s ease-in-out;
         }
         .hero .social-links {
             margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
         }
         .hero .social-links a {
             color: white;
@@ -119,8 +122,15 @@
             text-decoration: none;
         }
 
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         /* About Me Section */
         .about {
+            display: flex;
+            align-items: center;
             background-color: var(--bg-color);
             padding: 20px;
             border-radius: 10px;
@@ -131,6 +141,16 @@
         .about:hover {
             transform: translateY(-10px);
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .about img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 150px;
+            height: 150px;
+        }
+        .about p {
+            flex: 1;
+            color: var(--text-color);
         }
 
         /* Experience Section */
@@ -426,7 +446,7 @@
     <!-- Hero Section -->
     <div class="hero" id="hero">
         <h1>Abdelhalim Ghazi</h1>
-        <p>Flutter Developer with 5+ years of experience</p>
+        <p>Flutter Developer - Innovating Mobile Solutions</p>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/abdelhalim-ghazi" target="_blank">LinkedIn</a>
             <a href="https://github.com/r00texploit" target="_blank">GitHub</a>
@@ -437,6 +457,7 @@
     <div class="container" id="about">
         <h2>About Me</h2>
         <div class="about">
+            <img src="professional-photo.jpg" alt="Abdelhalim Ghazi">
             <p>I am Abdelhalim Ghazi, a passionate Flutter Developer with over 5 years of experience in creating dynamic and user-friendly mobile applications. I specialize in integrating cutting-edge technologies like GraphQL and Firebase to build scalable solutions. My expertise includes Bloc patterns and UI/UX design principles.</p>
         </div>
     </div>
