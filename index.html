@@ -87,7 +87,7 @@
         .hero {
             text-align: center;
             padding: 80px 20px;
-            background-image: linear-gradient(to right, rgba(0, 188, 212, 0.9), rgba(255, 64, 129, 0.9)), url('background-image-url.jpg');
+            background-image: linear-gradient(to right, rgba(0, 188, 212, 0.9), rgba(255, 64, 129, 0.9)), url('professional-photo.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -109,6 +109,15 @@
             font-size: 20px;
             margin-top: 10px;
         }
+        .hero .social-links {
+            margin-top: 20px;
+        }
+        .hero .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
 
         /* About Me Section */
         .about {
@@ -122,6 +131,55 @@
         .about:hover {
             transform: translateY(-10px);
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Experience Section */
+        .experience {
+            margin-top: 40px;
+        }
+        .experience .experience-card {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .experience .experience-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .experience .experience-card h3 {
+            font-size: 22px;
+            color: var(--primary-color);
+        }
+        .experience .experience-card p {
+            margin-top: 10px;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .skills .skill-card {
+            text-align: center;
+            margin: 20px;
+        }
+        .skills .skill-card img {
+            border-radius: 50%;
+            border: 2px solid var(--primary-color);
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+        .skills .skill-card img:hover {
+            transform: scale(1.1);
+        }
+        .skills .skill-card p {
+            font-size: 14px;
+            margin-top: 8px;
         }
 
         /* Projects Section */
@@ -184,29 +242,28 @@
             opacity: 1;
         }
 
-        /* Skills Section */
-        .skills {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 40px 0;
+        /* Education & Certifications Section */
+        .education {
+            margin-top: 40px;
         }
-        .skills img {
-            border-radius: 50%;
-            border: 2px solid var(--primary-color);
-            padding: 10px;
-            transition: transform 0.3s ease;
+        .education .education-card {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .skills img:hover {
-            transform: scale(1.1);
+        .education .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
         }
-        .skill-card {
-            text-align: center;
-            margin: 20px;
+        .education .education-card h3 {
+            font-size: 22px;
+            color: var(--primary-color);
         }
-        .skill-card p {
-            font-size: 14px;
-            margin-top: 8px;
+        .education .education-card p {
+            margin-top: 10px;
         }
 
         /* Contact Form */
@@ -282,6 +339,15 @@
             background-color: #bdc3c7;
             cursor: not-allowed;
         }
+        .contact .social-links {
+            margin-top: 20px;
+        }
+        .contact .social-links a {
+            color: var(--text-color);
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
 
         /* Footer */
         footer {
@@ -349,8 +415,10 @@
         <div class="nav-links">
             <a href="#hero">Home</a>
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education & Certifications</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -358,44 +426,42 @@
     <!-- Hero Section -->
     <div class="hero" id="hero">
         <h1>Abdelhalim Ghazi</h1>
-        <p>Flutter Developer | Mobile App Specialist</p>
+        <p>Flutter Developer with 5+ years of experience</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/abdelhalim-ghazi" target="_blank">LinkedIn</a>
+            <a href="https://github.com/r00texploit" target="_blank">GitHub</a>
+        </div>
     </div>
 
     <!-- About Me Section -->
     <div class="container" id="about">
         <h2>About Me</h2>
         <div class="about">
-            <p>I am Abdelhalim Ghazi, a passionate Flutter Developer with over 5 years of experience in creating dynamic and user-friendly mobile applications. I specialize in integrating cutting-edge technologies like GraphQL and Firebase to build scalable solutions.</p>
+            <p>I am Abdelhalim Ghazi, a passionate Flutter Developer with over 5 years of experience in creating dynamic and user-friendly mobile applications. I specialize in integrating cutting-edge technologies like GraphQL and Firebase to build scalable solutions. My expertise includes Bloc patterns and UI/UX design principles.</p>
         </div>
     </div>
 
-    <!-- Projects Section -->
-    <div class="container" id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <img src="silal.gif" alt="Multivendor App">
-                <div class="overlay">
-                    <p>Tech Stack: Dart, Firebase Auth, Google Map API, Bloc</p>
-                </div>
-                <h3>Multivendor Food, Grocery, eCommerce, Parcel, Pharmacy Delivery App</h3>
-                <a href="https://github.com/r00texploit/presstegApp" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    <!-- Experience Section -->
+    <div class="container" id="experience">
+        <h2>Experience</h2>
+        <div class="experience">
+            <div class="experience-card">
+                <h3>Burjeel Holdings</h3>
+                <p>Role: Flutter Developer</p>
+                <p>Dates: Jan 2020 - Present</p>
+                <p>Main Accomplishments: Increased patient interaction efficiency by 30%</p>
             </div>
-            <div class="project-card">
-                <img src="customer.png" alt="Home Service App">
-                <div class="overlay">
-                    <p>Tech Stack: Dart, Firebase Auth, Google Map API, ChatGPT Integration, Provider</p>
-                </div>
-                <h3>On-Demand Home Service Flutter App with ChatGPT Integration</h3>
-                <a href="https://github.com/r00texploit/handyman_app" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <div class="experience-card">
+                <h3>ElSheikh Abdallah ElBadri University</h3>
+                <p>Role: Mobile App Developer</p>
+                <p>Dates: Jun 2017 - Dec 2019</p>
+                <p>Main Accomplishments: Reduced app load times by 40%</p>
             </div>
-            <div class="project-card">
-                <img src="https://github.com/r00texploit/alla_zogak_user/blob/master/assets/1.png?raw=true" alt="E-commerce Platform">
-                <div class="overlay">
-                    <p>Tech Stack: Dart, Firebase Auth,  Google Map API, Provider</p>
-                </div>
-                <h3>E-commerce Platform with Product Listings, Shopping Carts, and User Accounts</h3>
-                <a href="https://github.com/r00texploit/alla_zogak_user" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <div class="experience-card">
+                <h3>Freelance Projects</h3>
+                <p>Role: Flutter Developer</p>
+                <p>Dates: Jan 2015 - May 2017</p>
+                <p>Main Accomplishments: Developed multiple successful mobile applications for various clients</p>
             </div>
         </div>
     </div>
@@ -416,9 +482,31 @@
                 <img src="github.png" alt="Github">
                 <p>Dart</p>
             </div>
+            <div class="skill-card">
+                <img src="graphql.png" alt="GraphQL">
+                <p>GraphQL</p>
+            </div>
+            <div class="skill-card">
+                <img src="bloc.png" alt="Bloc">
+                <p>Bloc</p>
+            </div>
+            <div class="skill-card">
+                <img src="ux.png" alt="UI/UX Design">
+                <p>UI/UX Design</p>
+            </div>
         </div>
     </div>
 
+    <!-- Projects Section -->
+    <div class="container" id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="silal.gif" alt="Multivendor App">
+                <div class="overlay">
+                    <p>Tech Stack: Dart, Firebase Auth, Google Map API, Bloc</p>
+                </div>
+                <h3>Multivendor Food, Grocery, eCommerce, Parcel, Pharmacy Delivery App</h3>
     <!-- Contact Form -->
     <div class="container" id="contact">
         <div class="contact">
