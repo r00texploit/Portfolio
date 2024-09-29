@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdelhalim Ghazi - Flutter Developer Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-color: #ffffff;
@@ -278,6 +280,7 @@
             overflow: hidden;
             text-align: center;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .project-card:hover {
@@ -297,18 +300,9 @@
             color: var(--primary-color);
         }
 
-        .project-card a {
-            display: block;
-            padding: 15px;
-            background-color: var(--button-bg);
-            color: var(--button-text-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-
-        .project-card a:hover {
-            background-color: var(--button-hover-bg);
+        .project-card p {
+            padding: 0 15px;
+            color: var(--text-color);
         }
 
         .project-card .overlay {
@@ -553,7 +547,9 @@
     <div class="container" id="about">
         <h2>About Me</h2>
         <div class="about">
-            <p>With over 5 years of expertise in mobile application development, I am proficient in multiple programming languages and platforms. I specialize in creating innovative mobile solutions using Flutter, Firebase, and other cutting-edge technologies.</p>
+            <p>With over 5 years of expertise in mobile application development, I am proficient in multiple programming
+                languages and platforms. I specialize in creating innovative mobile solutions using Flutter, Firebase,
+                and other cutting-edge technologies.</p>
         </div>
     </div>
 
@@ -565,9 +561,11 @@
                 <h3>Flutter Developer, Burjeel Holdings</h3>
                 <p>Nov 2023 – May 2024</p>
                 <div class="details" style="word-wrap: break-word;">
-                    <p>Developed and maintained a healthcare app, improving patient interaction and appointment booking efficiency by 30%.</p>
+                    <p>Developed and maintained a healthcare app, improving patient interaction and appointment booking
+                        efficiency by 30%.</p>
                     <p>Integrated Firebase and RESTful APIs for real-time data handling.</p>
-                    <p>Collaborated with UX/UI teams to design user-friendly interfaces, increasing engagement by 25%.</p>
+                    <p>Collaborated with UX/UI teams to design user-friendly interfaces, increasing engagement by 25%.
+                    </p>
                 </div>
             </div>
             <div class="experience-card">
@@ -591,7 +589,8 @@
                 <h3>Flutter Instructor, Afro-Tech Training Center</h3>
                 <p>Jul 2022 – Feb 2023</p>
                 <div class="details">
-                    <p>Delivered training sessions on Flutter, contributing to a 30% increase in participants' technical proficiency.</p>
+                    <p>Delivered training sessions on Flutter, contributing to a 30% increase in participants' technical
+                        proficiency.</p>
                 </div>
             </div>
             <div class="experience-card">
@@ -647,50 +646,53 @@
     <div class="container" id="projects">
         <h2>Projects</h2>
         <div class="projects">
-            <div class="project-card">
-                <img src="silal.gif" alt="Multivendor App">
+            <div class="project-card" onclick="window.location.href='https://github.com/r00texploit/cemetery_app'">
+                <img src="https://github.com/r00texploit/cemetery_app/blob/master/images/logo.png?raw=true"
+                    alt="Burjeel Holdings CemeteryApp">
                 <div class="overlay">
                     <p>Tech Stack: Dart, Firebase Auth, Google Map API, Bloc, GraphQL</p>
                 </div>
-                <h3>Multivendor Food, Grocery, eCommerce, Parcel, Pharmacy Delivery App</h3>
+                <h3>Burjeel Holdings Cemetery App</h3>
+                <p>Developed and maintained a cemetery app, improving user interaction and grave search efficiency by
+                    30%.</p>
             </div>
-            <div class="project-card">
-                <img src="customer.png" alt="eLearning App for ElSheikh Abdallah ElBadri University">
+            <div class="project-card" onclick="window.location.href='https://github.com/r00texploit/eaeu_student_app'">
+                <img src="https://github.com/r00texploit/eaeu_student_app/blob/main/assets/images/Logo.svg?raw=true"
+                    alt="ElSheikh Abdallah ElBadri University App">
                 <div class="overlay">
                     <p>Tech Stack: Dart, Firebase Auth, Google Map API, Bloc, AI Integration, Machine Learning</p>
                 </div>
-                <h3>Project 2: On-Demand Home Service Flutter App with ChatGPT Integration</h3>
+                <h3>ElSheikh Abdallah ElBadri University App</h3>
+                <p>Developed a robust eLearning app, improving user satisfaction by 40%.</p>
             </div>
-            <div class="project-card">
-                <img src="https://github.com/r00texploit/myshop_customer/blob/main/assets/images/2.jpg?raw=true" alt="Project 3">
+            <div class="project-card" onclick="window.location.href='https://github.com/r00texploit/myshop_customer'">
+                <img src="https://github.com/r00texploit/myshop_customer/blob/main/assets/images/2.jpg?raw=true"
+                    alt="City Soft Ltd Co App">
                 <div class="overlay">
                     <p>Tech Stack: Flutter, Google Maps API, RESTful services</p>
                 </div>
-                <h3>Project 3: E-commerce Platform</h3>
+                <h3>City Soft Ltd Co App</h3>
+                <p>Led development of complex Flutter applications, increasing downloads by 20%.</p>
             </div>
-            <div class="project-card">
-                <img src="https://github.com/r00texploit/alla_zogak_user/blob/master/assets/1.png?raw=true" alt="Fitness Tracker App">
+            <div class="project-card" onclick="window.location.href='https://github.com/r00texploit/alla_zogak_user'">
+                <img src="https://github.com/r00texploit/alla_zogak_user/blob/master/assets/1.png?raw=true"
+                    alt="Fitness Tracker App">
                 <div class="overlay">
                     <p>Tech Stack: Flutter, Dart, Firebase Auth, Google Map API, Bloc, GraphQL</p>
                 </div>
                 <h3>Fitness Tracker App</h3>
-                <a href="#">GitHub Repository/Live Demo</a>
+                <p>Developed innovative mobile apps for iOS and Android, increasing user engagement by 30%.</p>
             </div>
-            <div class="project-card">
-                <img src="https://github.com/r00texploit/message_me/blob/main/images/logo.png?raw=true" alt="Expense Tracker App">
-                <div class="overlay">
-                    <p>Tech Stack: Flutter, SQLite, RESTful APIs</p>
-                </div>
-                <h3>Expense Tracker App</h3>
-                <a href="#">GitHub Repository/Live Demo</a>
-            </div>
-            <div class="project-card">
-                <img src="https://github.com/r00texploit/message_me/blob/main/images/logo.png?raw=true" alt="Weather App">
+
+            <div class="project-card" onclick="window.location.href='https://github.com/r00texploit/message_me'">
+                <img src="https://github.com/r00texploit/message_me/blob/main/images/logo.png?raw=true"
+                    alt="Weather App">
                 <div class="overlay">
                     <p>Tech Stack: Flutter, OpenWeather API</p>
                 </div>
                 <h3>Weather App</h3>
-                <a href="#">GitHub Repository/Live Demo</a>
+                <p>Developed applications for various clients, achieving a 95% client satisfaction rate.</p>
+                <p>Managed communication, timelines, and budgets effectively.</p>
             </div>
         </div>
     </div>
@@ -711,21 +713,25 @@
                 <h3>Google Mobile Web Specialist</h3>
                 <p>Issued by Google, 2022</p>
                 <p>Description:</p>
-                <p>This certification highlights Abdelhalim’s expertise in advanced mobile web development practices. It focuses on key areas such as:</p>
+                <p>This certification highlights Abdelhalim’s expertise in advanced mobile web development practices. It
+                    focuses on key areas such as:</p>
                 <ul>
                     <li>Responsive Web Design (RWD)</li>
                     <li>Progressive Web Apps (PWAs)</li>
                     <li>Performance optimization on mobile devices</li>
                     <li>Advanced JavaScript for building fast, reliable, and accessible mobile experiences</li>
-                    <li>Best practices in mobile-first development, including caching strategies, service workers, and optimizing web assets for mobile users</li>
+                    <li>Best practices in mobile-first development, including caching strategies, service workers, and
+                        optimizing web assets for mobile users</li>
                 </ul>
-                <p>The certification validates Abdelhalim’s ability to create seamless mobile experiences, ensuring optimized performance, user engagement, and adherence to modern web standards.</p>
+                <p>The certification validates Abdelhalim’s ability to create seamless mobile experiences, ensuring
+                    optimized performance, user engagement, and adherence to modern web standards.</p>
             </div>
             <div class="education-card">
                 <h3>Firebase Developer Certification</h3>
                 <p>Issued by Google, 2023</p>
                 <p>Description:</p>
-                <p>This certification demonstrates Abdelhalim’s expertise in building applications using Firebase, a Backend-as-a-Service (BaaS) platform. It covers:</p>
+                <p>This certification demonstrates Abdelhalim’s expertise in building applications using Firebase, a
+                    Backend-as-a-Service (BaaS) platform. It covers:</p>
                 <ul>
                     <li>Real-time database integration for syncing data across platforms</li>
                     <li>Firebase Cloud Firestore for scalable databases</li>
@@ -734,7 +740,8 @@
                     <li>Usage of Firebase Analytics for tracking user behavior and improving app performance</li>
                     <li>Implementation of CI/CD workflows using Firebase Hosting and Cloud Functions</li>
                 </ul>
-                <p>The certification underscores Abdelhalim's comprehensive knowledge in utilizing Firebase’s tools and services to build powerful, data-driven applications with real-time capabilities.</p>
+                <p>The certification underscores Abdelhalim's comprehensive knowledge in utilizing Firebase’s tools and
+                    services to build powerful, data-driven applications with real-time capabilities.</p>
             </div>
         </div>
     </div>
@@ -743,7 +750,8 @@
     <div class="container" id="contact">
         <div class="contact">
             <h2>Contact Me</h2>
-            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mkgwlbnz" method="post">
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mkgwlbnz"
+                method="post">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your name.." required>
 
