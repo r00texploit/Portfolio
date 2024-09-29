@@ -13,20 +13,20 @@
             --primary-color: #00bcd4;
             --secondary-color: #ff4081;
             --accent-color: #ffeb3b;
-            --button-bg: #00bcd4;
-            --button-hover-bg: #0097a7;
-            --button-text-color: #ffffff;
+            --button-bg: rgba(255, 255, 255, 0.2);
+            --button-text-color: rgba(0, 0, 0, 0.8);
+            --button-border-color: rgba(0, 0, 0, 0.8);
         }
 
-        [data-theme="dark"] {
+        .dark-theme {
             --bg-color: #121212;
             --text-color: #e0e0e0;
             --primary-color: #00bcd4;
             --secondary-color: #ff4081;
             --accent-color: #ffeb3b;
-            --button-bg: #00bcd4;
-            --button-hover-bg: #0097a7;
-            --button-text-color: #ffffff;
+            --button-bg: rgba(0, 0, 0, 0.2);
+            --button-text-color: rgba(255, 255, 255, 0.8);
+            --button-border-color: rgba(255, 255, 255, 0.8);
         }
 
         /* General Styles */
@@ -94,6 +94,21 @@
 
         nav a:hover {
             color: var(--primary-color);
+        }
+
+        /* Theme Toggle Button */
+        #theme-toggle {
+            background-color: var(--button-bg);
+            color: var(--button-text-color);
+            border: 1px solid var(--button-border-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        #theme-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.3);
         }
 
         /* Hero Section */
@@ -521,7 +536,7 @@
             <a href="#education">Education & Certifications</a>
             <a href="#contact">Contact</a>
         </div>
-        <button id="theme-toggle" style="background-color: rgba(251, 252, 252, 0); color: rgba(5, 5, 5, 0.8); border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Toggle Theme</button>
+        <button id="theme-toggle">Toggle Theme</button>
     </nav>
 
     <!-- Hero Section -->
@@ -755,11 +770,23 @@
     <script>
         // Theme Toggle
         const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Check localStorage for theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.classList.add(savedTheme);
+        }
+
         themeToggle.addEventListener('click', () => {
-            if (document.documentElement.hasAttribute('data-theme')) {
-                document.documentElement.removeAttribute('data-theme');
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                localStorage.setItem('theme', 'light-theme');
             } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark-theme');
             }
         });
 
