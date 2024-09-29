@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #1e1e1e;
-            --text-color: #f5f5f5;
+            --bg-color: #ffffff;
+            --text-color: #1e1e1e;
             --primary-color: #00bcd4;
             --secondary-color: #ff4081;
             --accent-color: #ffeb3b;
@@ -387,7 +387,7 @@
             margin-bottom: 20px;
             border-radius: 6px;
             border: 1px solid #ddd;
-            background-color: #1e1e1e;
+            background-color: var(--bg-color);
             font-size: 16px;
             color: var(--text-color);
             transition: border-color 0.3s ease;
@@ -521,6 +521,7 @@
             <a href="#education">Education & Certifications</a>
             <a href="#contact">Contact</a>
         </div>
+        <button id="theme-toggle">Toggle Theme</button>
     </nav>
 
     <!-- Hero Section -->
@@ -598,7 +599,7 @@
 
     <!-- Skills Section -->
     <div class="container" id="skills">
-        <h2>Skills</h2>
+        <h2>Key Skills</h2>
         <div class="skills">
             <div class="skill-card">
                 <img src="flutter.png" alt="Flutter">
