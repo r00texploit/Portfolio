@@ -1,0 +1,1 @@
+Profile photo binary is managed externally; see index.html embedded data image.
